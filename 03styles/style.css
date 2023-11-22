@@ -1,0 +1,32 @@
+body{
+    background-color: burlywood;
+}
+
+h1{
+    color:blueviolet;
+    font-size: 500px;
+    background-image: url('PowerpointSlide.png');
+}
+
+p {
+    background-color: tomato;
+    color: blue;
+    font-family: Verdana;
+    font-size: 240%;
+    border: 3px aqua;
+    padding: 40px;
+    margin: 22px green;
+}
+
+a:link,a:visited{
+    background-color: aqua;
+    color: black;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,a:active{
+    background-color: blue;
+}
