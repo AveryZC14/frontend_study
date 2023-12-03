@@ -1,0 +1,154 @@
+table{
+    border-collapse:collapse;
+    border-spacing: none;
+    padding:none;
+}
+
+td{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    padding:none;
+    margin:none;
+}
+
+/* table,tr,td{
+    padding: none;
+    margin:none;
+} */
+
+h3{
+    text-align: center;
+    font-size:xx-large;
+    color:black;
+    padding:none;
+    margin:none;
+}
+
+h1{
+    background-color: #45C4B0;
+    color: #012030;
+    padding:20px;
+    border: hidden 1px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+button.game_button{
+    width:100%;
+    height:100%;
+    background-color: rgb(228, 255, 228);
+    margin:none;
+    border:none;
+    padding:none;
+}
+
+button.reset{
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+/* td.x{
+    background-color: red;
+    color: red;
+}
+
+td.o{
+    background-color: blue;
+    color:blue;
+} */
+
+main{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    /*justify-self: center;
+    */
+}
+
+/* h1{
+    padding: 20px;
+    background-color: plum;
+    border: 5px solid black;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+} */
+
+img.x,img.o{
+    margin:none;
+    padding:none;
+    width:100%;
+    height:auto;
+    border:none;
+    display: block;
+}
+
+/* img.x{
+    src:"x.png";
+    alt:"x";
+}
+
+img.o{
+    src:"o.png";
+    alt:"o";
+} */
+
+@media screen and (max-width: 850px){
+    html{
+        height:100%;
+    }
+    body{
+        height:100%;
+    }
+    header{
+        border-radius: 0px;
+        -webkit-border-radius:0px;
+        -moz-border-radius:0px;
+        -ms-border-radius:0px;
+        -o-border-radius:0px;
+}
+    .all{
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-rows: 1fr;
+        padding:0px;
+        margin:0px;
+    }
+    .content{
+        margin-top:0px;
+        padding:0px;
+        border:0px;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        flex:1;
+        background-color:#9AEBA3;
+
+    }
+}
+
+
+@media screen and (max-width:500px){
+    td{
+        border: 2px solid black;
+        width: 60px;
+        height: 60px;
+        padding:none;
+        margin:none;
+    }
+    
+}

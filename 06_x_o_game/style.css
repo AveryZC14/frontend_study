@@ -1,0 +1,123 @@
+table{
+    border-collapse:collapse;
+    border-spacing: none;
+    padding:none;
+}
+
+td{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    padding:none;
+    margin:none;
+}
+
+/* table,tr,td{
+    padding: none;
+    margin:none;
+} */
+
+h3{
+    text-align: center;
+    font-size:xx-large;
+    color:black;
+    padding:none;
+    margin:none;
+}
+
+button.game_button{
+    width:100%;
+    height:100%;
+    background-color: rgb(185, 247, 185);
+    margin:none;
+    border:none;
+    padding:none;
+}
+
+button.reset{
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+/* td.x{
+    background-color: red;
+    color: red;
+}
+
+td.o{
+    background-color: blue;
+    color:blue;
+} */
+
+main{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    /* justify-self: center; */
+    flex:70%;
+    background-color: aliceblue;
+    border: 8px solid black;
+    height: 1000px;
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+}
+
+side{
+    flex:15%;
+}
+
+body{
+    
+    background-image: linear-gradient(purple,white);
+    background-attachment: fixed;
+}
+
+all{
+    display: flex;
+    flex-flow: row;
+    /* justify-content: center; */
+}
+
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    padding: 20px;
+    background-color: plum;
+    border: 5px solid black;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+img.x,img.o{
+    margin:none;
+    padding:none;
+    width:100%;
+    height:auto;
+    border:none;
+    display: block;
+}
+
+/* img.x{
+    src:"x.png";
+    alt:"x";
+}
+
+img.o{
+    src:"o.png";
+    alt:"o";
+} */
