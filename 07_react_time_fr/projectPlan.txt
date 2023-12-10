@@ -1,0 +1,6 @@
+highscores game
+
+Form - addScore
+list - scoreBoard
+  list item - score
+    form - updateButton

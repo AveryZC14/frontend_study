@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "sussy"
-    ]
+    ],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
 }

@@ -1,32 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { NewScoreForm } from "./NewScoreForm";
+import { ScoreTable } from "./ScoreTable";
 
 function App() {
+  const [scores, setScores]:[object[],any] = useState([]);
+
+  function addScore(name: string, scoreNum: number) {
+    setScores((currentScores:any) => {
+      return [...currentScores, { id: crypto.randomUUID(), name, scoreNum }];
+    });
+  }
+  function deleteScore(id:string) {
+    setScores((currentScores:any) => {
+      return currentScores.filter((score:any) => score.id !== id)
+    })
+  }
+  function editScore() {}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <NewScoreForm />
+    <h1>ScoreBoard</h1>
+    <ScoreList/> */}
+      <NewScoreForm onSubmit={addScore} />
+      <h1>ScoreBoard</h1>
+      <ScoreTable
+        scores={scores}
+        deleteScore={deleteScore}
+        editScore={editScore}
+      />
+    </>
   );
 }
-
-// function MyButton():any{
-//   return{
-//     <button>I'm a button</button>;
-//   };
-// }
 
 export default App;
