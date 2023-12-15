@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-export function NewScoreForm({ onSubmit }: any = (a:any,b:any) => {}): any {
-  const [newPlayerName, setNewPlayerName] = useState("");
+export function NewScoreForm({ onSubmit }:any) {
+  const [newPlayerName, setNewPlayerName]:[string,(a:string)=>void] = useState("");
   const [newPlayerScore, setNewPlayerScore] = useState(0);
 
   function handleSubmit(e:any){
     e.preventDefault()
-    if (onsubmit != null){
-        onsubmit(newPlayerName);
-    }
+    onSubmit(newPlayerName,newPlayerScore);
+    setNewPlayerName("")
+    setNewPlayerScore(0)
     
   }
   return (

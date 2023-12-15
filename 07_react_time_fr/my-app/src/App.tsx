@@ -1,23 +1,50 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { NewScoreForm } from "./NewScoreForm";
 import { ScoreTable } from "./ScoreTable";
 
-function App() {
-  const [scores, setScores]:[object[],any] = useState([]);
+interface Score {
+  id: string;
+  name: string;
+  scoreNum: number;
+}
 
-  function addScore(name: string, scoreNum: number) {
-    setScores((currentScores:any) => {
-      return [...currentScores, { id: crypto.randomUUID(), name, scoreNum }];
+function App() {
+  const [scores, setScores]: [Score[], any] = useState(() => {
+    const localValue = localStorage.getItem("ITEMS");
+    if (localValue == null) return [];
+    return JSON.parse(localValue);
+  });
+
+  useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(scores));
+  }, [scores]);
+
+  // function addScore(name: string, scoreNum: number) {
+  function addScore(name: string, scoreNum: any): void {
+    setScores((currentScores: Score[]): Score[] => {
+      console.log("new one" + name + scoreNum);
+      let newScores:Score[] = [...currentScores, { id: crypto.randomUUID(), name, scoreNum }]
+      newScores.sort((a,b)=>(b.scoreNum-a.scoreNum))
+      return newScores;
     });
   }
-  function deleteScore(id:string) {
-    setScores((currentScores:any) => {
-      return currentScores.filter((score:any) => score.id !== id)
-    })
+  function deleteScore(id: string) {
+    setScores((currentScores: any): void => {
+      return currentScores.filter((score: Score) => score.id !== id);
+    });
   }
-  function editScore() {}
+  function editScore(id: string, newScore: number) {
+    setScores((currentScores: Score[]) => {
+      //let newScores = []
+      return currentScores.map((userScore: Score) => {
+        if (userScore.id === id) {
+          userScore.scoreNum = newScore;
+        }
+        return userScore;
+      });
+    });
+  }
   return (
     <>
       {/* <NewScoreForm />
