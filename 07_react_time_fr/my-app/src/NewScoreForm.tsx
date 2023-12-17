@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export function NewScoreForm({ onSubmit }:any) {
   const [newPlayerName, setNewPlayerName]:[string,(a:string)=>void] = useState("");
-  const [newPlayerScore, setNewPlayerScore] = useState(0);
+  const [newPlayerScore, setNewPlayerScore]:[number,(a:number)=>void] = useState(0);
 
   function handleSubmit(e:any){
     e.preventDefault()

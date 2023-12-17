@@ -37,12 +37,14 @@ function App() {
   function editScore(id: string, newScore: number) {
     setScores((currentScores: Score[]) => {
       //let newScores = []
-      return currentScores.map((userScore: Score) => {
+      let newScores:any = currentScores.map((userScore: Score) => {
         if (userScore.id === id) {
           userScore.scoreNum = newScore;
         }
         return userScore;
       });
+      newScores.sort((a:any,b:any)=>(b.scoreNum-a.scoreNum))
+      return newScores
     });
   }
   return (

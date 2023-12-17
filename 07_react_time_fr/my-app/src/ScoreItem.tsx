@@ -20,10 +20,10 @@ export function ScoreItem({
     if (showEdit){
       return(
         <>
-        <button className="cancel-edit-score" onClick={editToggle}>Cancel</button>
-        <form onSubmit={()=>editScore(id,newScore)}>
+        <button className="cancel-edit-score" onClick={editToggle} >Cancel</button>
+        <form onSubmit={()=>editScore(id,newScore)} style={{display:"inline"}}>
           <label htmlFor="new-score">New Score:</label>
-          <input type="number" value = {newScore} name="newScore" id="new-score" onChange={(e) => setNewScore(e.target.value)} />
+          <input type="number" value = {newScore} name="newScore" id="new-score" onChange={(e) => setNewScore(e.target.value)} size={10} />
           <button type="submit">Update Score</button>
         </form>
         </>
