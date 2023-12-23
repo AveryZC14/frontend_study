@@ -52,6 +52,7 @@ function App() {
       {/* <NewScoreForm />
     <h1>ScoreBoard</h1>
     <ScoreList/> */}
+    <h1>Scoreboard</h1>
       <NewScoreForm onSubmit={addScore} />
       <h1>ScoreBoard</h1>
       <ScoreTable
