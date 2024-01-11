@@ -9,27 +9,43 @@ export function ScoreItem({
   editScore,
 }: any): any {
   // console.log(id,name,scoreNum)
-  const [showEdit,setShowEdit]:[Boolean,any] = useState(false);
-  const [newScore,setNewScore]:[number,any] = useState(scoreNum);
+  const [showEdit, setShowEdit]: [Boolean, any] = useState(false);
+  const [newScore, setNewScore]: [number, any] = useState(scoreNum);
 
-  function editToggle(){
-    setShowEdit(!showEdit)
+  function editToggle() {
+    setShowEdit(!showEdit);
   }
 
-  function renderEdit(){
-    if (showEdit){
-      return(
+  function renderEdit() {
+    if (showEdit) {
+      return (
         <>
-        <button className="cancel-edit-score" onClick={editToggle} >Cancel</button>
-        <form onSubmit={()=>editScore(id,newScore)} style={{display:"inline"}}>
-          <label htmlFor="new-score">New Score:</label>
-          <input type="number" value = {newScore} name="newScore" id="new-score" onChange={(e) => setNewScore(e.target.value)} size={10} />
-          <button type="submit">Update Score</button>
-        </form>
+          <button className="cancel-edit-score" onClick={editToggle}>
+            Cancel
+          </button>
+          <form
+            onSubmit={() => editScore(id, newScore)}
+            style={{ display: "inline" }}
+          >
+            <label htmlFor="new-score">New Score:</label>
+            <input
+              type="number"
+              value={newScore}
+              name="newScore"
+              id="new-score"
+              onChange={(e) => setNewScore(e.target.value)}
+              size={10}
+            />
+            <button type="submit">Update Score</button>
+          </form>
         </>
-      )
-    }else{
-      return (<button className="edit-score" onClick={editToggle}>Edit Score</button>)
+      );
+    } else {
+      return (
+        <button className="edit-score" onClick={editToggle}>
+          Edit Score
+        </button>
+      );
     }
   }
 
@@ -39,7 +55,7 @@ export function ScoreItem({
       <td>{name}</td>
       <td>{scoreNum}</td>
       <td>
-        <button className="Delete-score" onClick={()=>deleteScore(id)}>
+        <button className="Delete-score" onClick={() => deleteScore(id)}>
           Delete Score
         </button>
       </td>
