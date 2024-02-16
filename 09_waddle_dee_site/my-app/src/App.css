@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.site-nav{
+  max-width: 800px;
+  background-color: pink;
+}
+
+.nav-list{
+  list-style-type: none;
+  display:flex;
+}
+
+.nav-item{
+  padding: 30px;
+}
+
+.main-app{
+  background-color: black;
+}
+
+/* link{
+  color:blue;
+} */

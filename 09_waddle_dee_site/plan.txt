@@ -1,0 +1,13 @@
+goals:
+- to practice the react dom
+- to practice formatting and cssing a website
+- to once again have a dynamic website
+- to make a react form with multiple input types
+
+site:
+- home
+- about
+- waddle dees
+    - bandana waddle dees
+    - nerd waddle dee
+- waddle deeterbase
