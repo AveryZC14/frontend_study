@@ -7,10 +7,9 @@ function App() {
     <header className='main-header'>
       <h1 className='site-title'>Waddle Dee Site</h1>
       <nav className='site-nav'>
-        hello
         <ul className='nav-list'>
           <li className="nav-item">
-            <a href="google.com" className="nav-link">Home</a>
+            <a href="/" className="nav-link">Home</a>
           </li>
           <li className="nav-item">
             <a href="google.com" className="nav-link">About</a>

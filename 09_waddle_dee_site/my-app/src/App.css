@@ -1,25 +1,110 @@
+/* 
+FDEBD1 - waddle skin
+F6B182 - cheek
+EF7D1B - body light
+E65900 - body dark
+F9B62B - foot light
+E47001 - foot dark
+7A4203 - eyebrown
+
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  }
+
 .App {
   text-align: center;
 }
 
+.main-header{
+  background-color: #EF7D1B;
+  display:flex;
+  height: 110px;
+  align-items: stretch;
+  align-content: stretch;
+  /* padding-top:20px; */
+}
+
+.site-title{
+  color: #7A4203;
+  background-color: #FDEBD1;
+  max-width: 300px;
+  min-width: 300px;
+  text-align: center;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  margin:20px;
+  padding: 12px;
+}
+
 .site-nav{
   max-width: 800px;
-  background-color: pink;
+  background-color: grey;
+  display:flex;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: row;
+  height:110px;
 }
 
 .nav-list{
   list-style-type: none;
   display:flex;
+  background-color: pink;
+  justify-items: stretch;
+  align-content: stretch;
+  
+  /* height:100px; */
 }
 
 .nav-item{
-  padding: 30px;
+  align-items: center;
+  /* border-style: solid; */
+  flex-grow:1;
+  background-color: #EF7D1B;
+  /* padding:20px;
+  padding-top:30px; */
+  /* justify-items: center;
+  text-align: center; */
+  
+  
 }
 
 .main-app{
-  background-color: black;
+  background-color: #FDEBD1;
 }
 
-/* link{
-  color:blue;
+
+.nav-link {
+  height:fill;
+  /* background-color: turquoise; */
+  color:white;
+  background-image:none;
+  font-size: 22px;
+  text-align: center;
+  width: 128px;
+  height: 110px;
+  display:block;
+  box-sizing: border-box;
+  line-height: 110px;
+}
+
+.nav-link:hover{
+  color:black;
+  background-image: url('media/waddle_dee_looking_at_u.png');
+  background-size: cover;
+}
+
+.nav-link:active{
+  color:black;
+}
+
+
+/* .nav-item:hover {
+  
 } */
