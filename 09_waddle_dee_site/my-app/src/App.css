@@ -28,18 +28,27 @@ E47001 - foot dark
 }
 
 .site-title{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 28px;
   color: #7A4203;
   background-color: #FDEBD1;
   max-width: 300px;
   min-width: 300px;
+  box-sizing: border-box;
+  height: 70px;
   text-align: center;
+  line-height: 70px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   margin:20px;
-  padding: 12px;
+  /* padding: 12px; */
+}
+
+.title-link{
+  text-decoration: none;
 }
 
 .site-nav{
