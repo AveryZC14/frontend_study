@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom"
+import { HeaderNavLink } from "./HeaderNavLink";
 
 export function Header(){
-    // const pages = ["Home","About"];
+    interface page{
+        path:string;
+        label?:string;
+    }
+    const pages:Array<page> = [{path:"Home"},{path:"About"},{path:"WaddleDees", label:"Waddle Dees"}];
     return (
         <>
         <header className='main-header'>
@@ -10,7 +15,9 @@ export function Header(){
             </Link>
             <nav className='site-nav'>
                 <ul className='nav-list'>
-                <li className="nav-item">
+                    {pages.map((linkPath:{path:string,label?:string})=>{return(<HeaderNavLink linkPath = {linkPath.path} linkLabel = {linkPath.label}/>)})}
+                    
+                {/* <li className="nav-item">
                     <Link to="/Home" className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item">
@@ -21,7 +28,7 @@ export function Header(){
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/Deeterbase">Deeterbase</Link>
-                </li>
+                </li> */}
                 </ul>
             </nav>
             </header>
