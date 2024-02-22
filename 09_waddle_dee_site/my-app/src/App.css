@@ -109,7 +109,7 @@ E47001 - foot dark
   background-size: cover;
 }
 
-.nav-link:active{
+.nav-link.active{
   color:black;
 }
 
