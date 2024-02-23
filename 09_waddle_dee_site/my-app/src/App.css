@@ -14,17 +14,27 @@ E47001 - foot dark
   padding: 0;
   }
 
+  .font-main {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
 .App {
   text-align: center;
 }
 
-.main-header{
+.header{
   background-color: #EF7D1B;
   display:flex;
   height: 110px;
   align-items: stretch;
   align-content: stretch;
   /* padding-top:20px; */
+  position: relative;
 }
 
 .site-title{
@@ -52,8 +62,9 @@ E47001 - foot dark
 }
 
 .site-nav{
-  max-width: 800px;
-  background-color: grey;
+  /* max-width: 800px; */
+  width: 100%;
+  background-color: #EF7D1B;
   display:flex;
   align-items: stretch;
   align-content: stretch;
@@ -84,8 +95,13 @@ E47001 - foot dark
   
 }
 
+.sticky-nav {
+  position: fixed;
+  width: 100%;
+}
 .main-app{
   background-color: #FDEBD1;
+  /* padding-top: 110px; */
 }
 
 
@@ -94,7 +110,7 @@ E47001 - foot dark
   /* background-color: turquoise; */
   color:white;
   background-image:none;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   width: 128px;
   height: 110px;
@@ -111,9 +127,30 @@ E47001 - foot dark
 
 .nav-link.active{
   color:black;
+  background-image: url('media/waddle_tilted.webp');
+  background-size: cover;
 }
 
 
 /* .nav-item:hover {
   
 } */
+
+.main-header{
+  text-align: center;
+  padding:40px;
+  font-size: 50px;
+}
+
+.waddle-bar{
+  width: 100%;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.waddle-spinner{
+  /* background-color: #EF7D1B; */
+  width:110px;
+  height: 110px;
+  justify-self:flex-end;
+}

@@ -4,7 +4,7 @@ import './App.css';
 // import App from './App';
 // import router from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import { createBrowserRouter,RouterProvider,Navigate } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage';
 import { Root } from './pages/Root';
 import { Home } from './pages/Home';
@@ -23,7 +23,11 @@ const router = createBrowserRouter([
     {
       path: "About",
       element: <About />
-    }
+    },
+    // {
+    //   path:"*",
+    //   element:<Navigate to="/Home" replace />
+    // }
   ]
   },
 ]);

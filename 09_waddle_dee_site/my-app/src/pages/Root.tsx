@@ -1,15 +1,15 @@
-import { Outlet , Link } from "react-router-dom";
+import { Outlet , Navigate } from "react-router-dom";
 import { Header } from "../components/Header";
 
 export function Root(){
     return (
         <>
             <Header/>
-            <main className='main-app'>
-                <div id="detail">
-                    <Outlet />
-                </div>
-            </main>
+            <Navigate to="/Home"/>
+
+            <div id="detail">
+                <Outlet />
+            </div>
             <footer>
             <h2>
                 links

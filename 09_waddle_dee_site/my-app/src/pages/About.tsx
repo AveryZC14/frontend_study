@@ -1,6 +1,6 @@
 export function About(){
     return(
-      <>
+      <main className='main-app font-main'>
       <h1>waddledees</h1>
       <div className="section">
         are cool
@@ -11,6 +11,6 @@ export function About(){
       <div className="section">
 
       </div>
-      </>
+      </main>
     )
 }

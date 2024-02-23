@@ -8,7 +8,7 @@ export function HeaderNavLink(
     }
     return(
         <li className="nav-item">
-            <NavLink to={"/"+linkPath} className="nav-link">{linkLabel}</NavLink>
+            <NavLink to={"/"+linkPath} className="nav-link font-main">{linkLabel}</NavLink>
         </li>
     )
 
